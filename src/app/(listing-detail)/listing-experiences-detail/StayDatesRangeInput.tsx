@@ -8,6 +8,11 @@ import DatePickerCustomDay from "@/components/DatePickerCustomDay";
 import DatePicker from "react-datepicker";
 import ClearDataButton from "@/app/(client-components)/(HeroSearchForm)/ClearDataButton";
 
+const TIME_SLOTS = [
+  "Morning (9:00–12:00)",
+  "Afternoon (13:30–16:30)",
+];
+
 export interface StayDatesRangeInputProps {
   className?: string;
 }
@@ -15,16 +20,17 @@ export interface StayDatesRangeInputProps {
 const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
   className = "flex-1",
 }) => {
-  const [startDate, setStartDate] = useState<Date | null>(
-    new Date("2023/02/06")
-  );
-  const [endDate, setEndDate] = useState<Date | null>(new Date("2023/02/23"));
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState<string | null>(null);
   //
 
-  const onChangeDate = (dates: [Date | null, Date | null]) => {
-    const [start, end] = dates;
-    setStartDate(start);
-    setEndDate(end);
+  const onChangeDate = (date: Date | null) => {
+    setSelectedDate(date);
+  };
+
+  const clearSelection = () => {
+    setSelectedDate(null);
+    setSelectedTimeSlot(null);
   };
 
   const renderInput = () => {
@@ -35,20 +41,16 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
         </div>
         <div className="flex-grow text-left">
           <span className="block xl:text-lg font-semibold">
-            {startDate?.toLocaleDateString("en-US", {
-              month: "short",
-              day: "2-digit",
-            }) || "Add dates"}
-            {endDate
-              ? " - " +
-                endDate?.toLocaleDateString("en-US", {
+            {selectedDate
+              ? selectedDate.toLocaleDateString("en-US", {
                   month: "short",
                   day: "2-digit",
                 })
-              : ""}
+              : "Add date"}
+            {selectedTimeSlot ? ` · ${selectedTimeSlot}` : ""}
           </span>
           <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
-            {"Check in - Check out"}
+            {"Select date & time slot"}
           </span>
         </div>
       </>
@@ -65,8 +67,8 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
             }`}
           >
             {renderInput()}
-            {startDate && open && (
-              <ClearDataButton onClick={() => onChangeDate([null, null])} />
+            {(selectedDate || selectedTimeSlot) && open && (
+              <ClearDataButton onClick={clearSelection} />
             )}
           </Popover.Button>
 
@@ -82,11 +84,8 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
             <Popover.Panel className="absolute left-auto xl:-right-10 right-0 z-10 mt-3 top-full w-screen max-w-sm px-4 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-neutral-800 p-8">
                 <DatePicker
-                  selected={startDate}
+                  selected={selectedDate}
                   onChange={onChangeDate}
-                  startDate={startDate}
-                  endDate={endDate}
-                  selectsRange
                   monthsShown={2}
                   showPopperArrow={false}
                   inline
@@ -97,6 +96,27 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
                     <DatePickerCustomDay dayOfMonth={day} date={date} />
                   )}
                 />
+                <div className="mt-4">
+                  <span className="block text-sm font-medium text-neutral-700 dark:text-neutral-200 mb-2">
+                    Select a time slot
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {TIME_SLOTS.map((slot) => (
+                      <button
+                        key={slot}
+                        type="button"
+                        onClick={() => setSelectedTimeSlot(slot)}
+                        className={`px-3 py-2 rounded-full border text-sm ${
+                          selectedTimeSlot === slot
+                            ? "bg-neutral-900 text-white border-neutral-900"
+                            : "border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-200"
+                        }`}
+                      >
+                        {slot}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </Popover.Panel>
           </Transition>

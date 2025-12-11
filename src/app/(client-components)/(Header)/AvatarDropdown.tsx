@@ -34,8 +34,8 @@ export default function AvatarDropdown({ className = "" }: Props) {
                       <Avatar sizeClass="w-12 h-12" />
 
                       <div className="flex-grow">
-                        <h4 className="font-semibold">Eden Smith</h4>
-                        <p className="text-xs mt-0.5">Los Angeles, CA</p>
+                        <h4 className="font-semibold">Dom Smith</h4>
+                        <p className="text-xs mt-0.5">London, UK</p>
                       </div>
                     </div>
 

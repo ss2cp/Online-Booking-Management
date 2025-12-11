@@ -37,13 +37,13 @@ const ListingExperiencesDetailPage: FC<
       <div className="listingSection__wrap !space-y-6">
         {/* 1 */}
         <div className="flex justify-between items-center">
-          <Badge color="pink" name="Specific Tour" />
+          <Badge color="pink" name="Bike tour" />
           <LikeSaveBtns />
         </div>
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Trang An Boat Tour & Mua Cave
+          The Hutong Experience – Hutong Bike Tour
         </h2>
 
         {/* 3 */}
@@ -52,7 +52,7 @@ const ListingExperiencesDetailPage: FC<
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Tokyo, Jappan</span>
+            <span className="ml-1"> Beijing, China</span>
           </span>
         </div>
 
@@ -62,7 +62,7 @@ const ListingExperiencesDetailPage: FC<
           <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
             Hosted by{" "}
             <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              Kevin Francis
+              Dom &amp; the Our Beijing team
             </span>
           </span>
         </div>
@@ -74,15 +74,15 @@ const ListingExperiencesDetailPage: FC<
         <div className="flex items-center justify-between xl:justify-start space-x-8 xl:space-x-12 text-sm text-neutral-700 dark:text-neutral-300">
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-clock text-2xl"></i>
-            <span className="">3.5 hours</span>
+            <span className="">3 hours</span>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-user-friends text-2xl"></i>
-            <span className="">Up to 10 people</span>
+            <span className="">1–14 riders</span>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-language text-2xl"></i>
-            <span className="">English, VietNames</span>
+            <span className="">English &amp; Chinese</span>
           </div>
         </div>
       </div>
@@ -92,50 +92,36 @@ const ListingExperiencesDetailPage: FC<
   const renderSection2 = () => {
     return (
       <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Experiences descriptions</h2>
+        <h2 className="text-2xl font-semibold">What you&apos;ll do</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div className="text-neutral-6000 dark:text-neutral-300">
           <p>
-            TRANG AN BOAT TOUR & MUA CAVE CLIMBING TOUR FROM HANOI
+            Discover the real Beijing on our signature Hutong Bike Experience — an immersive ride through the ancient alleyways that locals have called home for centuries.
             <br />
             <br />
-            07:30 – 08:00 – Our guide will meet you at your hotel/stay and start
-            a 120km comfortable Limousine bus journey through the verdant
-            landscape. Stopover for a rest on the way.
+            Hop on a bike and explore the stories, flavours, and hidden corners of Beijing’s hutongs, where daily life moves to its own rhythm. This isn&apos;t just a tour — it&apos;s a deep dive into local culture, history, and everyday life.
             <br />
             <br />
-            BAI DINH PAGODA EXPLORER.
+            <span className="font-semibold">What makes The Hutong Experience special:</span>
             <br />
             <br />
-            10:30 – Arrive Bai Dinh pagoda complex, get on electric cars to
-            visit massive architecture.
+            • Ride through centuries‑old hutong neighbourhoods around Beixinqiao, the Drum &amp; Bell Towers, and Shichahai<br />
+            • Taste local street‑food snacks from vendors who have served generations<br />
+            • Stay cool and comfortable with drink stops and photo breaks along the way<br />
+            • Discover hidden cafes, rooftops, and craft beer spots that most visitors never find<br />
+            <br />
+            Every ride is a little different. We go with the flow, adjust to your interests and pace, and venture off the expected path so you can experience real local life.
             <br />
             <br />
-            12:15 – Enjoy the buffet lunch at our restaurant, a great place to
-            savor the flavours of Vietnamese food.
+            <span className="font-semibold">Perfect for:</span>
             <br />
             <br />
-            TRANG AN TOUR ON BOAT.
+            • Travellers who want a unique, active way to see the city<br />
+            • Families, friends, and teams looking for a shared adventure<br />
+            • Fans of history, street food, culture &amp; community
             <br />
             <br />
-            13:30 – Visit Trang An Grottoes, get on a rowing boat traveling
-            along the river with scenic mountain and green fields landscape.
-            <br />
-            <br />
-            MUA CAVE HIKING. TAKE PICTURE
-            <br />
-            <br />
-            15:45 – Arrive at Mua Cave and start an amazing trek up to the top
-            of Ngoa Long mountain.
-            <br />
-            <br />
-            17:30 – 20:00 – Return to our Limousine bus and then come back to
-            Hanoi. Drop you off at your hotel/stay. Other things to note
-            <br />
-            <br />
-            It is one full day tour. Start from 07.30 AM and finish at 20.00. We
-            just put one hour and default departure time because we have many
-            other tours. IF you need any further details
+            Standard duration is 3 hours. All details (including exact meeting point near Beixinqiao subway) will be confirmed with you after booking.
           </p>
         </div>
       </div>
@@ -184,7 +170,7 @@ const ListingExperiencesDetailPage: FC<
           />
           <div>
             <a className="block text-xl font-medium" href="##">
-              Kevin Francis
+              Dom – Our Beijing
             </a>
             <div className="mt-1.5 flex items-center text-sm text-neutral-500 dark:text-neutral-400">
               <StartRating />
@@ -196,9 +182,7 @@ const ListingExperiencesDetailPage: FC<
 
         {/* desc */}
         <span className="block text-neutral-6000 dark:text-neutral-300">
-          Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides
-          accommodation, an outdoor swimming pool, a bar, a shared lounge, a
-          garden and barbecue facilities...
+          Dom and the Our Beijing team have spent years exploring, living, and hosting friends in Beijing’s hutongs. Our rides are relaxed, story‑driven, and always tailored to the people in the group — whether it&apos;s families, friends, or corporate teams.
         </span>
 
         {/* info */}
@@ -313,7 +297,7 @@ const ListingExperiencesDetailPage: FC<
         <div>
           <h2 className="text-2xl font-semibold">Location</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
+            Hutong neighbourhoods around Beixinqiao, Drum &amp; Bell Towers, and Shichahai, Beijing
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
@@ -327,7 +311,7 @@ const ListingExperiencesDetailPage: FC<
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY&q=Eiffel+Tower,Paris+France"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY&q=Beixinqiao+Beijing+China"
             ></iframe>
           </div>
         </div>
@@ -356,8 +340,8 @@ const ListingExperiencesDetailPage: FC<
         <div>
           <h4 className="text-lg font-semibold">Guest requirements</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            Up to 10 guests ages 4 and up can attend. Parents may also bring
-            children under 2 years of age.
+            Up to 18 guests ages 14 and up can attend. Parents may also bring
+            children 6 and up years of age.
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
@@ -368,9 +352,9 @@ const ListingExperiencesDetailPage: FC<
           <div className="prose sm:prose">
             <ul className="mt-3 text-neutral-500 dark:text-neutral-400 space-y-2">
               <li>
-                Formal Wear To Visit Bai Dinh Pagoda Be ready before 7.30 Am.
+                  comfortable clothes, seasonal layers, gloves in winter, etc.
               </li>
-              <li>We will pick up from 07.30 to 08.00 AM</li>
+              <li>Please arrive on time</li>
             </ul>
           </div>
         </div>
@@ -384,9 +368,9 @@ const ListingExperiencesDetailPage: FC<
         {/* PRICE */}
         <div className="flex justify-between">
           <span className="text-3xl font-semibold">
-            $19
+            From 500
             <span className="ml-1 text-base font-normal text-neutral-500 dark:text-neutral-400">
-              /person
+              RMB / bike
             </span>
           </span>
           <StartRating />
@@ -403,17 +387,17 @@ const ListingExperiencesDetailPage: FC<
         {/* SUM */}
         <div className="flex flex-col space-y-4">
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>$19 x 3 adults</span>
-            <span>$57</span>
+            <span>500 RMB x 4 bike</span>
+            <span>2,000 RMB</span>
           </div>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
             <span>Service charge</span>
-            <span>$0</span>
+            <span>0 RMB</span>
           </div>
           <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
           <div className="flex justify-between font-semibold">
-            <span>Total</span>
-            <span>$199</span>
+            <span>Total from</span>
+            <span>2,000 RMB</span>
           </div>
         </div>
 

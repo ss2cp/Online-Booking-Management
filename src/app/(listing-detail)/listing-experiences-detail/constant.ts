@@ -1,6 +1,10 @@
 import { ListingGalleryImage } from "@/components/listing-image-gallery/utils/types";
 
 export const PHOTOS: string[] = [
+    "https://our-beijing.com/wp-content/uploads/2023/08/IMG_0213-1-960x1280.jpg",
+    "https://our-beijing.com/wp-content/uploads/2023/08/5c19da7d7957f43fb091fdcaec8ada29-2-1707x1280.jpg",
+    "https://our-beijing.com/wp-content/uploads/2023/08/IMG_0709-1-720x1280.jpg",
+    "https://our-beijing.com/wp-content/uploads/2023/08/IMG_5499-960x1280.jpg",
   "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   "https://images.pexels.com/photos/1154638/pexels-photo-1154638.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   "https://images.pexels.com/photos/3851949/pexels-photo-3851949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -22,11 +26,11 @@ export const PHOTOS: string[] = [
 ];
 
 export const includes_demo = [
-  { name: "Set Menu Lunch on boat" },
-  { name: "Express Bus From Hanoi To Halong and Return" },
-  { name: "Mineral Water On Express Bus" },
-  { name: "Kayak or Bamboo Boat. Life Jacket." },
-  { name: "Halong Bay Entrance Ticket" },
+  { name: "Mode of transport available\n" +
+          "Bicycle, eBike/eScooter or Pedelac (pedal assisted electric bicycle)" },
+  { name: "Local street food snacks" },
+  { name: "Soft drinks to stay refreshed" },
+  { name: "Additional extras could include beer, coffee, tea." },
 ];
 
 export const imageGallery: ListingGalleryImage[] = [...PHOTOS].map(

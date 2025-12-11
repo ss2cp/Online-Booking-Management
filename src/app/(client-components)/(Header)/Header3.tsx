@@ -29,12 +29,12 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
   const [showHeroSearch, setShowHeroSearch] =
     useState<StaySearchFormFields | null>();
   //
-  const [currentTab, setCurrentTab] = useState<SearchTab>("Stays");
+  const [currentTab, setCurrentTab] = useState<SearchTab>("Experiences");
 
   //
   useOutsideAlerter(headerInnerRef, () => {
     setShowHeroSearch(null);
-    setCurrentTab("Stays");
+    setCurrentTab("Experiences");
   });
 
   let pathname = usePathname();
@@ -116,7 +116,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             onClick={() => setShowHeroSearch("dates")}
             className="block px-4 cursor-pointer py-3 "
           >
-            Check In
+            Date
           </span>
           <span className="h-5 w-[1px] bg-neutral-300 dark:bg-neutral-700"></span>
           <span
@@ -125,7 +125,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             }}
             className="block px-4 cursor-pointer font-normal py-3"
           >
-            Add guests
+            Guests
           </span>
         </div>
 
@@ -155,7 +155,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
           ${showHeroSearch ? "duration-75" : ""} 
           ${
             showHeroSearch
-              ? currentTab === "Cars" || currentTab === "Flights"
+              ? currentTab === "Cars"
                 ? "scale-y-[4.4]"
                 : "scale-y-[3.4]"
               : ""

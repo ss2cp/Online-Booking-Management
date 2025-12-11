@@ -25,21 +25,21 @@ const PayPage: FC<PayPageProps> = () => {
                   fill
                   alt=""
                   className="object-cover"
-                  src="https://images.pexels.com/photos/6373478/pexels-photo-6373478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  src="https://our-beijing.com/wp-content/uploads/2023/09/Screenshot-2023-09-20-at-12.00.48-AM-1755x1280.jpg"
                 />
               </div>
             </div>
             <div className="pt-5  sm:pb-5 sm:px-5 space-y-3">
               <div>
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                  Hotel room in Tokyo, Jappan
+                  Our Beijing
                 </span>
                 <span className="text-base sm:text-lg font-medium mt-1 block">
-                  The Lounge & Bar
+                  Hutong Bike Tour
                 </span>
               </div>
               <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
-                2 beds · 2 baths
+                2 adults · 1 child · 1 infant
               </span>
               <div className="w-10 border-b border-neutral-200  dark:border-neutral-700"></div>
               <StartRating />
@@ -87,7 +87,7 @@ const PayPage: FC<PayPageProps> = () => {
 
               <div className="flex flex-col">
                 <span className="text-sm text-neutral-400">Guests</span>
-                <span className="mt-1.5 text-lg font-semibold">3 Guests</span>
+                <span className="mt-1.5 text-lg font-semibold">4 Guests</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ const PayPage: FC<PayPageProps> = () => {
             <div className="flex text-neutral-6000 dark:text-neutral-300">
               <span className="flex-1">Total</span>
               <span className="flex-1 font-medium text-neutral-900 dark:text-neutral-100">
-                $199
+                2,000 RMB
               </span>
             </div>
             <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
@@ -124,7 +124,7 @@ const PayPage: FC<PayPageProps> = () => {
           </div>
         </div>
         <div>
-          <ButtonPrimary href="/">Explore more stays</ButtonPrimary>
+          <ButtonPrimary href="/">Explore more experiences</ButtonPrimary>
         </div>
       </div>
     );

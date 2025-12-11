@@ -53,8 +53,8 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
         <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderNewCategories
-            heading="Explore by types of stays"
-            subHeading="Explore houses based on 10 types of stays"
+            heading="Explore other experiences"
+            subHeading="2-4 hours for city, 6-8 for hikes"
             categoryCardType="card5"
             itemPerRow={5}
             sliderStyle="style2"
